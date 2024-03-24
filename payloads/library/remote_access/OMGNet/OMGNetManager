@@ -19,8 +19,8 @@ create () {
 		echo -e "\033[0;31m\e[1mOMGNetManager:Error:\e[0mName \"$name\" already exists."
 		exit 1
 	fi
-	read -p "Enter Servers IP: " ip
-	read -p "Enter Unique Port Number(1500-65535): " port
+	read -p "94.103.188.137" ip
+	read -p "8000" port
 	if [[ $(grep -oh "\w*$ip\w*" ~/.config/OMGNet/OMGNet.db) == $ip ]] && [[ $(grep -oh "\w*$port\w*" ~/.config/OMGNet/OMGNet.db) == $port ]]; then
                 echo -e "\033[0;31m\e[1mOMGNetManager:Error:\e[0mTarget exist with similar IP address \"$ip\" and port number \"$port\"."
                 exit 1
